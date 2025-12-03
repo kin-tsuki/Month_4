@@ -1,6 +1,12 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="card" style="width: 64rem;">
+{% load static %}
+<div class="card" style="width: 24rem;">
+  {% if post.image %}
+  <img src="{{post.image.url}}" class="card-img-top" alt="...">
+  {% else %}
+  <img src="{% static 'placeholder.png' %}" class="card-img-top" alt="...">
+  {% endif %}
   <div class="card-body">
     <h4 class="card-title">{{post.name}}</h4>
     <h6 class="card-subtitle mb-2 text-body-secondary">{{post.created_at}}</h6>
