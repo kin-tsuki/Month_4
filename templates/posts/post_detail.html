@@ -14,4 +14,12 @@
     <p class="card-text">{{post.rate}}</p>
   </div>
 </div>
+<strong>Comments</strong>
+<div style="padding-left: 8px;">
+    <form method="post" action="" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Create comment</button>
+    </form>
+    </div>
 {% endblock %}
