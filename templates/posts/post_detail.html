@@ -12,6 +12,10 @@
     <h6 class="card-subtitle mb-2 text-body-secondary">{{post.created_at}}</h6>
     <p class="card-text">{{post.content}}</p>
     <p class="card-text">{{post.rate}}</p>
+    <strong>Comments</strong>
+    {% for comment in comments %}
+      <p class="card-text">{{comment.text}}</p>
+    {% endfor %}
   </div>
 </div>
 <strong>Comments</strong>
